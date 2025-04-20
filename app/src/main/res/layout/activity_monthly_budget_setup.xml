@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Monthly Budget Planner"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Plan your income, expenses, savings and more for the month."
+        android:textSize="14sp"
+        android:textColor="#777"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Income -->
+    <EditText
+        android:id="@+id/incomeInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter monthly income"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/descText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Rent -->
+    <EditText
+        android:id="@+id/rentInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Rent"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/incomeInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Subscriptions -->
+    <EditText
+        android:id="@+id/subscriptionInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Subscriptions (e.g. Netflix)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/rentInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Groceries -->
+    <EditText
+        android:id="@+id/groceriesInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Groceries"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/subscriptionInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Utilities -->
+    <EditText
+        android:id="@+id/utilitiesInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Utilities (Electricity, Water)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/groceriesInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Entertainment -->
+    <EditText
+        android:id="@+id/entertainmentInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Entertainment"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/utilitiesInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Savings -->
+    <EditText
+        android:id="@+id/savingsInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Monthly Savings Goal"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/entertainmentInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Emergency Fund -->
+    <EditText
+        android:id="@+id/emergencyFundInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Emergency Fund Contribution"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/savingsInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Summary -->
+    <TextView
+        android:id="@+id/summaryText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total Budgeted: Rs. 0.00"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/emergencyFundInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveBudgetBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Budget"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:textSize="18sp"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/summaryText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
